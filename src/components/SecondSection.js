@@ -8,7 +8,7 @@ const SecondSection = () => {
 
     const [element, controls] = useScroll()
     return (
-    <SecondContainer>   
+    <SecondContainer id="our-story">   
            <SecondHolder>
 
 

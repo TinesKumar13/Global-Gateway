@@ -1,5 +1,6 @@
 import React, { useState , useEffect} from 'react'
-import CardState from '../CardState'
+import { useLocation } from "react-router-dom";
+import {CardState} from '../CardState'
 import FifthSection from '../components/FifthSection'
 import FirstSection from '../components/FirstSection'
 import FourthSection from '../components/FourthSection'
@@ -10,17 +11,26 @@ import ThirdSection from '../components/ThirdSection'
 import styled from 'styled-components'
 import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
-
+import ScrollTop from '../components/ScrollTop'
+import { pageAnimation } from '../animation';
+import { motion } from "framer-motion";
 const AboutUs = () => {
 
     const [card, setCard] = useState([])
+   
 
     useEffect(() => {
    setCard(CardState)
     },[])
+
     return (
-        <div>
-           <Nav/>
+        <motion.div
+        exit="exit"
+        variants={pageAnimation}
+        initial="hidden"
+        animate="show"
+      >
+           
            <FirstSection/>
            <SecondSection/>
            <ThirdSection/>
@@ -49,8 +59,10 @@ const AboutUs = () => {
                 
                 </SixthContainer>
                 <ContactForm/>
+               
                 <Footer/>
-        </div>
+                <ScrollTop/>
+        </motion.div>
     )
 }
 

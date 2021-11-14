@@ -4,9 +4,12 @@ import backdrop from '../img/backdrop.jpg'
 import { motion } from "framer-motion";
 import { titleAnim, fade,} from "../animation";
 import { useScroll } from './useScroll';
+import {Link as Linker} from 'react-scroll'
 const FirstSection = () => {
 
     const [element, controls] = useScroll()
+
+
     return (
             <MainSection>
                  
@@ -15,7 +18,13 @@ const FirstSection = () => {
                     <Hide>
                     <motion.h1  variants={titleAnim} initial="hidden" animate={controls} ref={element}>GLOBAL GATEWAY MOVERS & FORWARDERS</motion.h1>
                     </Hide>
-                    <motion.button variants={fade} initial="hidden" animate={controls} ref={element}>Get A Quote</motion.button>
+
+                    <Linker  to="contact-form" spy={true} smooth={true}>
+                    <motion.button variants={fade} initial="hidden" animate={controls} ref={element}>
+                        
+                        Get A Quote</motion.button>
+                    </Linker>
+
 
                     </DescriptionHolder>
             </MainSection>

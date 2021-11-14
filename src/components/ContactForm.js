@@ -12,7 +12,7 @@ const ContactForm = () => {
   }
   return (
 
-    <FormMain>
+    <FormMain id="contact-form">
 
       <FormHolder variants={photoAnim} initial="hidden" animate={controls} ref={element} >
       <h1>Get <span>Quote</span></h1>

@@ -14,7 +14,7 @@ const FifthSection = () => {
 
     const [element,controls] = useScroll()
     return (
-            <FifthMain>
+            <FifthMain id="why-us">
                 <FifthContainer>
                     <Hide>
                     <motion.h1 variants={fade} initial="hidden" animate={controls} ref={element}>Why <span>Us</span></motion.h1>

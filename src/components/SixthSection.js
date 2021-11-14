@@ -8,7 +8,7 @@ const SixthSection = ({title, link ,description, arrow}) => {
 
     const [element, controls] = useScroll()
     return (
-        <CardContainer>
+        <CardContainer id="our-expertise">
             <Hide>
              <motion.h2 variants={photoAnim} initial="hidden" animate={controls} ref={element} >{title}</motion.h2>
              </Hide>
@@ -17,7 +17,7 @@ const SixthSection = ({title, link ,description, arrow}) => {
 
              </Hide>
              <Hide>
-            <a href="/">{link}</a>
+            <a href={link}>Learn More</a>
             </Hide>
 
             <Hide>

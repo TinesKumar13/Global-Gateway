@@ -2,15 +2,20 @@ import React , {useState} from 'react';
 import styled from 'styled-components'
 import global from "../img/global.png"
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-
+import { Link } from 'react-router-dom';
+import {Link as Linker} from 'react-scroll'
 const Nav = () => {
 
     const [toggle, setToggle] = useState(false)
+   
     return (
             <NavContainer>
                 <NavHolder>
                     <LogoHolder>
+                        <Link to="/"> 
                     <img src={global} alt="company-logo" />
+                        
+                        </Link>
 
                     </LogoHolder>
 
@@ -20,12 +25,35 @@ const Nav = () => {
 
                     </div>
                     <ul className ={toggle ? "active" : ""}>
-                        <li>Our Story</li>
-                        <li>About Us</li>
-                        <li>Vision and Strategy</li>
-                        <li>Why Us</li>
-                        <li>Our Expertise</li>
-                        <li>Contact Us</li>
+                        <Linker  to="our-story" spy={true} smooth={true}>
+                        <li onClick={() => setToggle(!toggle)}>Our Story</li>
+                        </Linker>
+
+                        <Linker  to="about-us" spy={true} smooth={true}>
+                        <li onClick={() => setToggle(!toggle)}>About Us</li>
+                        </Linker>
+
+                        <Linker  to="vision-strategy" spy={true} smooth={true}>
+                        <li onClick={() => setToggle(!toggle)}>Vision and Strategy</li>
+                        </Linker>
+
+                        <Linker  to="why-us" spy={true} smooth={true}>
+                        <li onClick={() => setToggle(!toggle)}>Why Us</li>
+                        </Linker>
+
+                        <Linker  to="our-expertise" spy={true} smooth={true}>
+                        <li onClick={() => setToggle(!toggle)}>Our Expertise</li>
+                        </Linker>
+
+                        <Linker  to="contact-us" spy={true} smooth={true}>
+                        <li onClick={() => setToggle(!toggle)}>Contact Us</li>
+                        </Linker>
+                        
+                       
+                        
+                        
+                        
+                        
                     </ul>
                 </NavHolder>
             </NavContainer>
@@ -114,6 +142,7 @@ width: 100%;
 `
 
 const LogoHolder = styled.div`
+margin-top: 1rem;
 img{
 width: 100%;
 }

@@ -11,7 +11,7 @@ const FourthSection = () => {
 
     const [element,controls] = useScroll()
     return (
-        <FourthContainer>
+        <FourthContainer id="vision-strategy">
 
 
                 <ImageOne src={helicopter} alt="helicopter" />

@@ -8,7 +8,7 @@ const Footer = () => {
 
     const [element,controls] = useScroll()
     return (
- <FooterMain>
+ <FooterMain id="contact-us">
     
     <Hide>
      <motion.h1 variants={fade} initial="hidden" animate={controls} ref={element} >Contact <span>Us</span></motion.h1>

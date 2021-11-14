@@ -8,7 +8,7 @@ const ThirdSection = () => {
 
     const [element, controls] = useScroll()
     return (
-    <ThirdContainer>   
+    <ThirdContainer id="about-us">   
            <ThirdHolder>
 
            <DescriptionHolder>
